@@ -9,12 +9,13 @@ start "Backend Server" cmd /k "mvn spring-boot:run"
 
 echo.
 echo Waiting for backend to start...
-timeout /t 15 /nobreak > nul
+echo Starting in 15 seconds...
+timeout /t 15 /nobreak
 
 echo.
 echo Installing Frontend Dependencies...
 cd ..\frontend
-npm install
+call npm install
 echo.
 echo Starting Frontend Server...
 start "Frontend Server" cmd /k "npm run serve"
