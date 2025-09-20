@@ -26,7 +26,7 @@
 ### 1. 資料庫設定
 
 1. 安裝 MySQL 8.0
-2. 建立資料庫：
+2. 建立資料庫：(可使用XAMPP)
 ```sql
 CREATE DATABASE library_system;
 ```
@@ -41,11 +41,13 @@ spring:
 ```
 
 4. 執行 DDL 腳本：
+(可使用XAMPP dashboard執行腳本)
 ```bash
 mysql -u root -p library_system < DB/DDL.sql
 ```
 
 5. 執行 DML 腳本（載入範例資料）：
+(可使用XAMPP dashboard執行腳本)
 ```bash
 mysql -u root -p library_system < DB/DML.sql
 ```
